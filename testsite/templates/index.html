@@ -1,0 +1,27 @@
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Crispy Testsite{% endblock %}</title>
+</head>
+<body>
+    <div id="wrap">
+        <div id="main">
+            <div class="form">
+                <h2>Using {% verbatim %}{% crispy form %}{% endverbatim %}</h2>
+                {% crispy form %}
+            </div>
+            <div style="margin-top:25px">
+                <h2>Using {% verbatim %}{{ form|crispy }}{% endverbatim %}</h2>
+                <form method="post" action=".">
+                    {{ form|crispy }}
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
